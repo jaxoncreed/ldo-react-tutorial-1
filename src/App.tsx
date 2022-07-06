@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <h2>Solid LDO Tutorial</h2>
       <LoginHeader sessionInfo={sessionInfo} />
-      {sessionInfo?.isLoggedIn && <ProfilePanel />}
+      {sessionInfo?.isLoggedIn && sessionInfo?.webId && <ProfilePanel webId={sessionInfo.webId} />}
     </div>
   );
 }
